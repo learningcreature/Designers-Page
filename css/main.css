@@ -30,7 +30,7 @@ body{
 /* Styling the header portion */
 header{
     background-color: #d9447e;
-    background-color: #5623d3;
+    /*background-color: #5623d3;*/
     border-bottom: 1px solid #c92163;
     padding: 20px 0;
 }
