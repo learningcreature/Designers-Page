@@ -1,0 +1,193 @@
+/* targetting 960px */
+body{
+    font-size: 14px;
+}
+#hamburger-event ~ label{
+    display: none;
+}
+
+#social{
+    display: none;
+}
+
+/*_____________________________Styling Our Works Section____________________________*/
+/*__________________________________________________________________________________*/
+
+    /*Styling our works section*/
+      #works ul li a img{
+        width:  calc(100% / 3 - .6em);
+    }
+
+    /* Styling the modal-window image */
+    .modal-window img{
+        width: 80%;
+    }
+/*_____________________________Styling Team Members________________________*/
+/*___________________________________________________________________________*/
+
+    #about aside div {
+        width: 100%;
+        box-sizing: border-box;
+     }
+    #about aside figure{
+        width: calc(33.3% - 3%);
+        margin-right: 4.5%;
+        padding: 0.5em;
+    }
+  
+    #about figure:hover img ~ p{
+        transition: .5s all ease-in;
+        height:18em;
+    }
+
+    
+/*____________________________Contact Styling_______________________*/
+/*___________________________________________________________________________*/
+    #contact{
+        display: flex;
+        padding: 0 1.6em;
+        flex-flow: column;
+        padding-left: 0;
+        padding-bottom: 3em; /* padding equal to footer */
+    }
+
+    #contact .contact-details,#contact .contact-form-container{
+        box-sizing: border-box;
+        width: 100%;
+        order: 2;
+        padding-left: none;
+    }
+/*aligning the address */
+    .contact-details{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+    .contact-details p{
+        padding: 1em 1em;
+    }
+    #contact .contact-form-container{
+        width: 100%;
+        order: 1;
+    }
+    .contact-form{
+        padding: none;
+    }
+    .contact-form label{
+        width: 100%;
+    }
+    .contact-form input:not([class^="btn"]), textarea{
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 180px;
+        margin: .5em 0 .5em 0;
+    }
+    .contact-form input[class^="btn"]{
+        float: right;
+    }
+   
+
+
+
+
+
+/*************************************************************************************************************
+**************************************************************************************************************
+                                    Targetting  768px resolution   
+______________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+*/
+
+@media only screen and (max-width:768px){
+    body{
+        font-size: 12px;
+    }
+    
+ /*____________________________Hero Area Styling_______________________*/
+/*___________________________________________________________________________*/
+    
+    /*................................Styling first column of hero........................*/
+main > section:first-child > div{
+    float:none;
+    width: 100%;
+    height: 250px;
+    background:#fdd897 url(../img/hero768.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*.............................Styling Second Column of Hero.......................*/
+div+article{
+    width: 100%;
+    height: 250px;
+    float: none;
+    background: rgba(255, 255, 255,.5);
+    background:rgba(255, 224, 236, .8);
+
+}
+ h1+ul>li a{
+    color: #555 !important;
+}   
+article>h1+ul>li::before{
+    color: #555 !important;    
+}
+
+/*_____________________________Styling Services Section_______________________________*/
+/*__________________________________________________________________________________*/
+
+    #services > article{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items:center;
+    }
+
+    #services > article figure{
+        margin-bottom: 1.6em;
+    }
+    #services > article figure:last-child{
+        margin-bottom: 0;
+    }
+    
+    #services figure figcaption,#services figure p{
+        text-align: justify;
+    }
+
+    #services figure>img{
+        width: 60%;
+    }
+    
+/*_____________________________Styling Team Members________________________*/
+/*___________________________________________________________________________*/
+    #about aside div {
+        width: 100%;
+        box-sizing: border-box;
+     }
+    #about aside figure{
+        width: 80%;
+        box-sizing: border-box;
+        margin-right: 0;
+        float: none;
+        padding: 1.6em;
+        border-radius: 3px;
+        margin: 1.6em auto;
+    }
+/*  clearing the margin-right from previous stylesheet,for the last team member*/
+    #about aside figure:last-child{
+        margin-right: auto !important;
+    }
+    
+    #about figure>p{
+        border: none;
+        height: auto;
+        text-align: justify;
+    }
+    
+  #about figure:hover img ~ p{
+        transition: none;
+        height:auto;
+    }
+
+    
+}/* end of media queries 768px*/
+
+

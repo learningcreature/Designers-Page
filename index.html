@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chapter 03 - Inline Style</title>
+       
+           <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/tablet.css" rel="stylesheet" type="text/css" media="screen and (max-width:960px)">
+        <link href="css/mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width:480px)">
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>smash<span class="logo">the</span>shell</h1> 
+                <p>
+                    Contact: <a href="tel://+917837110939"><em>+91 7837 110 939</em></a><br>
+                    E-mail:<a href="mailto://info.smashtheshell@gmail.com"><em>info.smashtheshell@gmail.com</em></a> 
+                </p> 
+            </div>    
+        </header>
+
+        <nav>
+            <div>
+                <input type="checkbox" id="hamburger-event" hidden="hidden">
+                <label for="hamburger-event"><img src="img/assets/menu1.png"></label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-col1">
+                <div>
+                   <article>
+                    <p>We enjoy what we do, we love to design and code the web. Our team is <span class="highlight">incredibly amazing</span>. If you have upcoming projects, Lets talk about it!</p>
+                    <p><a href="#" class="cta-button">Post a Project</a></p>
+<!--                    <p><a href="#">Join Our Team</a></p>    -->
+                  </article>
+                </div>
+                
+                <article>
+                    <h1>Some of our work overview</h1>
+                    <ul>
+                        <li><a href="#">Design Mockups and Prototypes</a></li>
+                        <li><a href="#">UX/UI Designing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">Front End Development</a></li>
+                        <li><a href="#">Back End Development</a></li> 
+                    </ul>
+                </article>
+            </section> <!-- Ends Hero Section  -->
+             <div id="social">
+                <a href="http://www.facebook.com/smashtheshell"><img src="img/assets/social_media_facebook.png" alt="facebook" title="facebook"></a><br>
+                <a href="http://www.twitter.com/smashtheshell"><img src="img/assets/social_media_twitter.png" alt="twitter" title="twitter"></a><br>
+                <a href="http://www.youtube.com/smashtheshell"><img src="img/assets/social_media_youtube.png" alt="youtube" title="youtube"></a><br>
+                <a href="http://www.pinterest.com/smashtheshell"><img src="img/assets/social_media_pinterest.png" alt="pinterest" title="pinterest"></a>
+            </div>
+
+            <!-- Column 1 -->
+            <section id="services">
+                <h1>Services We Provide</h1>
+                <article>
+                        <figure>
+                            <img src="img/assets/Front-End%20Development.png">
+                            <figcaption>Front End Development</figcaption>
+                            <p>Nullam commodo tempor ligula vel feugiat. Suspendisse leo dolor, consectetur in iaculis non, egestas ut urna. Ut tincidunt bibendum pharetra. Ut nisi massa, egestas in porttitor ut, vulputate nec nisi. </p>
+                        </figure>  
+
+                        <figure>
+                            <img src="img/assets/Back%20End%20Development.png">
+                            <figcaption>Back End Development</figcaption>
+                             <p>Duis ullamcorper est eu lectus consequat vehicula. Duis vehicula venenatis massa, et euismod arcu pretium sed. Ut imperdiet ligula non est ultricies ornare. Fusce lectus magna, cursus a malesuada in, gravida vel nulla. </p>
+                        </figure>  
+                        <figure>
+                            <img src="img/assets/UI_Designing.png">
+                            <figcaption>UI Designing</figcaption>
+                             <p> Maecenas quam ante, interdum vel pellentesque non, pharetra sit amet dolor. Suspendisse lorem nisl, tincidunt id condimentum eget, vulputate non lacus. </p>
+                        </figure>
+                </article>    
+            </section>
+            
+<!--        our works section -->
+            <section id="works">
+                <h1>Our Works</h1>
+                    <ul>
+                        <li>    
+                            <a href="#first"><img src="img/thumb1.jpg" alt="work 1" title="web picture 1"></a>
+                            <div id="first" class="modal-window">
+                                <img src="img/img1.jpg" alt="work 1" title="web picture 1">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>                          
+                                <!--  close button-->
+                                <a href="#works"></a>
+                            </div>    
+                            
+                        </li>
+                       
+                        <li>
+                            <a href="#second"><img src="img/thumb2.jpg" alt="work 2" title="web picture 2"></a>
+                            <div id="second" class="modal-window">
+                                <img src="img/img2.jpg" alt="work 2" title="web picture 2">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                              <a href="#works"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#third"><img src="img/thumb3.jpg" alt="work 3" title="web picture 3"></a> 
+                            <div id="third" class="modal-window">
+                                <img src="img/img3.jpg" alt="work 3" title="web picture 3">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                              <a href="#works"></a>
+                            </div>
+                        </li>
+                        <li>    
+                            <a href="#fourth"><img src="img/thumb4.jpg" alt="work 4" title="web picture 4"></a>
+                            <div id="fourth" class="modal-window">
+                                <img src="img/img4.jpg" alt="work 4" title="web picture 4">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                                <a href="#works"></a>
+                            </div>    
+                            
+                        </li>
+                        <li>    
+                            <a href="#fifth"><img src="img/thumb5.jpg" alt="work 5" title="web picture 5"></a>
+                            <div id="fifth" class="modal-window">
+                                <img src="img/img5.jpg" alt="work 5" title="web picture 5">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                               <a href="#works"></a>
+                            </div>    
+                            
+                        </li>
+                          <li>
+                            <a href="#sixth"><img src="img/thumb6.jpg" alt="work 6" title="web picture 6"></a>
+                            <div id="sixth" class="modal-window">
+                                <img src="img/img6.jpg" alt="work 6" title="web picture 6">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                                <a href="#works"></a>
+                            </div>
+                        </li>
+                        
+                    <!--   second row   -->
+                        
+                              <li>    
+                            <a href="#seventh"><img src="img/thumb6.jpg" alt="work 7" title="web picture 7"></a>
+                            <div id="seventh" class="modal-window">
+                                <img src="img/img6.jpg" alt="work 7" title="web picture 7">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>                          
+                                <!--  close button-->
+                                <a href="#works"></a>
+                            </div>    
+                            
+                        </li>
+                       
+                        <li>
+                            <a href="#eighth"><img src="img/thumb5.jpg" alt="work 8" title="web picture 8"></a>
+                            <div id="eighth" class="modal-window">
+                                <img src="img/img5.jpg" alt="work 8" title="web picture 8">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                              <a href="#works"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#ninth"><img src="img/thumb4.jpg" alt="work 9" title="web picture 9"></a> 
+                            <div id="ninth" class="modal-window">
+                                <img src="img/img4.jpg" alt="work 9" title="web picture 9">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                              <a href="#works"></a>
+                            </div>
+                        </li>
+                        <li>    
+                            <a href="#tenth"><img src="img/thumb3.jpg" alt="work 10" title="web picture 10"></a>
+                            <div id="tenth" class="modal-window">
+                                <img src="img/img3.jpg" alt="work 10" title="web picture 10">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                                <a href="#works"></a>
+                            </div>    
+                            
+                        </li>
+                        <li>    
+                            <a href="#el-th"><img src="img/thumb2.jpg" alt="work 11" title="web picture 11"></a>
+                            <div id="el-th" class="modal-window">
+                                <img src="img/img2.jpg" alt="work 11" title="web picture 11">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                               <a href="#works"></a>
+                            </div>    
+                            
+                        </li>
+                          <li>
+                            <a href="#tw-th"><img src="img/thumb1.jpg" alt="work 12" title="web picture 12"></a>
+                            <div id="tw-th" class="modal-window">
+                                <img src="img/img1.jpg" alt="work 12" title="web picture 12">
+                                <p>Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat.</p>  
+                                <a href="#works"></a>
+                            </div>
+                        </li>
+                    </ul>
+             </section>
+            
+             <section id="about">
+                <h1>About Us</h1>
+
+                <article>
+                    <input type="checkbox" id="readmorechk">
+                    <p>Duis ullamcorper est eu lectus consequat vehicula. Duis vehicula venenatis massa, et euismod arcu pretium sed. Ut imperdiet ligula non est ultricies ornare. Fusce lectus magna, cursus a malesuada in, gravida vel nulla. Nulla neque nulla, consectetur vitae volutpat sed, ultrices a odio. Morbi cursus lacinia nunc, ut pulvinar nibh interdum vel. Integer dolor metus, placerat tincidunt accumsan eget, faucibus id metus. Nam convallis rutrum lacus semper malesuada. Suspendisse in leo tellus, elementum porta orci.</p>
+                   
+                    <label for="readmorechk" id="read-label"><span>Read More</span><span>Read Less</span></label>
+                    <p id="more-text">Duis ac ipsum ac elit semper sagittis. Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat. Suspendisse leo dolor, consectetur in iaculis non, egestas ut urna. Ut tincidunt bibendum pharetra. Ut nisi massa, egestas in porttitor ut, vulputate nec nisi. Vestibulum pharetra erat sit amet libero fringilla luctus. Donec dapibus turpis non leo pulvinar laoreet. In facilisis orci in elit hendrerit varius. Maecenas quam ante, interdum vel pellentesque non, pharetra sit amet dolor. Suspendisse lorem nisl, tincidunt id condimentum eget, vulputate non lacus. Aenean purus nisi, faucibus vel ornare sit amet, lacinia nec quam. Etiam odio massa, dignissim vitae tincidunt ac, rutrum quis nibh. Aenean vel diam quam, non vulputate dui. Vivamus id felis odio.
+</p>
+                 </article>
+                 <aside id="team">
+                    <h2>Our team members</h2>
+                     <div>
+                         <figure>
+                            
+                           <img src="./img/team%20(2).jpg" alt="Founder" title="Founder">
+                              <figcaption style="text-align:center">
+                                 <a href="mailto:/nullam@example.com">Nullam commodo tempor  </a>
+                             </figcaption>
+                            <p>Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat. Suspendisse leo dolor, consectetur in iaculis non, egestas ut urna. Ut tincidunt bibendum pharetra. Ut nisi massa, egestas in porttitor ut, vulputate nec nisi. Vestibulum pharetra erat sit amet libero fringilla luctus. Donec dapibus turpis non leo pulvinar laoreet. </p>
+                         </figure>
+                         <figure>
+                             <img src="./img/team%20(1).jpg" alt="CEO" title="CEO">
+                             <figcaption style="text-align:center">
+                                 <a href="mailto:/porttiotr@example.com">porttitor pharetra </a>
+                             </figcaption>
+                             <p>Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat. Suspendisse leo dolor, consectetur in iaculis non, egestas ut urna. Ut tincidunt bibendum pharetra. Ut nisi massa, egestas in porttitor ut, vulputate nec nisi. Vestibulum pharetra erat sit amet libero fringilla luctus. Donec dapibus turpis non leo pulvinar laoreet. </p>
+                        </figure>     
+                         <figure>
+                            
+                            <img src="./img/team%20(3).jpg" alt="Manager" title="Manager">
+                              <figcaption style="text-align:center">
+                                 <a href="mailto:/suspendisse@example.com">Suspendisse leo </a> 
+                             </figcaption>
+                             <p>Praesent porttitor pharetra velit. Nullam commodo tempor ligula vel feugiat. Suspendisse leo dolor, consectetur in iaculis non, egestas ut urna. Ut tincidunt bibendum pharetra. Ut nisi massa, egestas in porttitor ut, vulputate nec nisi. Vestibulum pharetra erat sit amet libero fringilla luctus. Donec dapibus turpis non leo pulvinar laoreet. </p>
+                        </figure>     
+                     </div>
+                 </aside>
+            </section>
+        
+            <section id="contact">
+                <h1>Contact Us</h1>
+                <section class="contact-details">
+                    <p><span><strong>Office Address</strong></span><br>
+                        Smashtheshell<br>
+                        Sector 20-D, 160020<br>
+                        Chandigarh, India<br>
+                        <a href="tel:/+91 7837110939" >+91 7837 110 939 </a>
+                    </p>
+                </section>
+
+                <section class="contact-form-container">
+                    <h2>Post your project details</h2>    
+                    <form class="contact-form">
+                        <br>    
+                                <label for="first-name">First Name</label>
+                                <input type="text" placeholder="First Name" id="first-name" name="first-name">
+                        <br>
+                                <label for="last-name">Last Name</label>
+                                <input type="text" placeholder="Last Name" id="last-name" name="last-name">
+                        <br>    <label for="email-address">Email Address</label>
+                                <input type="email" placeholder="Email" id="email-address" name="email-address">
+                        <br>    <label for="confirm-email-address">Confirm Email Address</label>
+                                <input type="email" placeholder="Confirm Email" id="confirm-email-address" name="confirm-email-address">
+                        <br>    <label for="mobile-number">Phone Number</label>
+                                <input type="tel" placeholder="Phone" id="mobile-number" name="mobile-number">  
+                        <br>    <label for="confirm-mobile-number">Confirm Phone Number</label>
+                                <input type="tel" placeholder="Confirm Phone" id="confirm-mobile-number" name="confirm-mobile-number">
+                        <br>    <label for="description">Your Project Description</label>
+                                <textarea placeholder="Your Message Here" id="description"></textarea><br>
+                            <div id="form-btn-container">
+                                <input type="submit" name="Submit" value="Submit" class="btn-submit">
+                            </div>    
+                    </form>
+                </section>
+            </section> <!-- contacts ends-->
+ 
+        </main> <!-- End of main Wrapper -->
+        <footer>
+            <p><a href="#">smash<span class="logo">the</span>shell</a> &copy; 2015</p>
+         </footer>
+    </body>
+</html>

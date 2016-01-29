@@ -1,0 +1,129 @@
+/*      Targetting another resolution   480px
+______________________________________________________________________________________________________________
+*/
+
+    body{
+        font-size: 12px;
+        min-width: 280px;
+    }
+
+/* Styling the header portion */
+header{
+    background-color: #d9447e;
+    border-bottom: 1px solid #c92163;
+    padding: 1em 0;
+}
+header h1{
+    text-align: center;
+    float: none;
+    margin-bottom: .5em;
+}
+header p{
+    float: none;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+
+/*_____________________________Styling the Navigation_______________________________*/
+    #hamburger-event ~ label{
+        display: inline-block;
+        height: auto;
+    }
+    nav>div{
+        position: relative;
+        padding: 0 2.6em;
+    }
+    nav>div ul{
+        position: absolute;
+        left: -9999px;
+    }
+    #hamburger-event{
+        position: absolute;
+        left: -9999px;
+    }
+    #hamburger-event + label img{
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+    }
+
+    #hamburger-event:checked ~ ul{
+        left:0;
+        width: 100%;
+        transition: .2s all;
+        z-index: 999;
+    }
+    nav ul{
+        float: none;
+        background: #000000;
+    }
+    nav ul li{
+        float:none;
+    }
+    nav ul li a:hover::before{
+        border-top: none;
+    }
+
+/*____________________________Hero Area Styling_______________________*/
+    
+    /*................................Styling first column of hero........................*/
+    main > section:first-child > div{
+        background:#fdd897 url(../img/hero480.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    /*overlay color of hero section*/
+    .hero-col1>div:first-child::before{
+        content: "";
+        display: none;
+    }
+
+
+/***********************************Services Images****************************************/
+ 
+
+    #services figure>img{
+        min-width: 200px;
+        min-height: 180px;
+    }
+   
+  
+/*_____________________________Styling Our Works Section____________________________*/
+/*__________________________________________________________________________________*/
+/*Styling our works section*/
+    #works{width: 100% !important;}
+    #works ul{
+        width: 100%;
+        margin: 0 auto;
+        padding:.7em .5em .5em .5em !important;
+        box-sizing:border-box;
+    }
+    #works ul li{
+        display: inline;
+    }
+
+    /*Styling our works section*/
+      #works ul li a img{
+          width: 46.7%;
+        width:  calc(100% / 2 - .6em);
+
+    }
+
+    /* Styling the modal-window image */
+    .modal-window img{
+        width: 80%;
+    }
+
+  #works ul li a img:hover{
+        transform-origin:center;
+        transition:  .5s all ease-in-out;
+        transform: scale(1);
+        box-shadow: 0 0 0 1px #f39f3f;
+    }
+
+
+/*____________________________Footer Area Styling_______________________*/
+    footer{
+        position: static;
+    }

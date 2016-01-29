@@ -1,0 +1,843 @@
+/*resetting css elements */
+html,body, h1, h2, p, div, article, nav, header, footer, main,figcaption,a,span, figure, form, input, select,section, aside,ul,li, textarea,label{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:link, a:visited{
+    color: #fff;
+}
+a:hover, a:active{
+    color: #00eaea;
+}
+ul li{list-style-type: none;}
+
+/* styling body*/
+body{
+    width: 100%;
+    font-size: 16px;
+    font-family: helvetica,verdana;
+    background: lightcyan url(../img/pattern.png) repeat;
+    position: relative;
+
+
+}
+
+
+
+/* Styling the header portion */
+header{
+    background-color: #d9447e;
+    border-bottom: 1px solid #c92163;
+    padding: 20px 0;
+}
+
+header>div{
+    padding: 0 1.6em;
+    margin: 0 auto;
+}
+
+header h1{
+    text-align: left;
+    float: left;
+    color:#ffecf3;
+    line-height: 1.6em;
+}
+.logo{
+    color: #00eaea;
+}
+header p{
+    float: right;
+    line-height: 1.6em;
+    text-align: right;
+    color: #fff;
+}
+header p a{
+    margin-left: .5em;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+/* clearing floats */
+header div::after, header div::before{
+    content: "";
+    display: table;
+}
+header div::after{
+    clear: both;
+}
+
+
+/*_____________________________Styling the Navigation_______________________________*/
+/*__________________________________________________________________________________*/
+#hamburger-event ~ label{
+    display: none;
+}
+nav{
+    background: #d93072;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    width: 100%;
+    top:0;
+
+    z-index: 99;
+}
+
+nav ul{
+    float:left;
+}
+nav ul li{
+    float:left;
+    position: relative;
+    line-height: 3em;
+}
+
+nav ul li a{
+    display: block;   
+    color: #fff;
+    padding: 0 1.6em;
+    transition: .5s all;
+}
+
+nav ul li a:hover {
+    background-color: #bb0d51;
+    transition: .5s all;
+}
+nav ul li a:hover::before{
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 1px dotted #ff86b5;
+    position: absolute;
+    top:-1px; /* proper alignment of top border*/
+    left: 0;
+    transition: all .5s;
+}
+
+
+/*clearing the floated elements*/
+nav::after, nav::before{
+    content: "";
+    display: table;
+}
+nav::after{
+    clear: both;
+}
+
+
+/*_____________________________Styling the Main_______________________________*/
+/*__________________________________________________________________________________*/
+main{
+    width: 100%;
+    box-sizing: border-box;
+    border-top: none;
+}
+
+main>section:first-child{
+    height: auto;
+    width: 100%;
+}
+
+/*................................Styling first column of hero........................*/
+main > section:first-child > div{
+    float:left;
+    width: 60%;
+    height: 320px;
+    background:#fdd897 url(../img/hero-900.png) no-repeat ;
+    background-size: 100% 100%;
+}
+
+.hero-col1>div:first-child{
+    position: relative;
+}
+
+/*overlay color of hero section*/
+.hero-col1>div:first-child::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(243, 159, 63,.6);
+}
+
+/* Absolutely centering of our article contents */
+.hero-col1>div:first-child>article{
+    position: absolute;
+    margin: 0 auto;
+    width: 80%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*styling paragraph inside hero*/
+.hero-col1>div:first-child p:first-of-type{
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: #fff;;
+    font-family: georgia;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 1px 1px 1px #222;
+    letter-spacing: 0.04em;
+}
+
+/* Styling the Post a Project Call to Action*/
+
+div>article>p:last-child{
+    text-align: center;
+    margin-top: 20px;
+}
+.cta-button{
+    box-sizing: border-box;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    padding: .5em 2.6em;
+    white-space: nowrap;
+    font-weight: .45em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #eee;
+    background-color: #28a2bf;
+    font-weight: bold;
+    border:1px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+.cta-button:hover{
+    color: #fff;
+    background-color: #2fbfe1;
+    font-weight: bold;
+    
+}
+
+/*.............................Styling Second Column of Hero.......................*/
+
+div+article{
+    width: 40%;
+    height: 320px;  
+    float: right;
+    background: rgba(243, 159, 63,.9);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+article>h1{
+    font-size: 1.6em;
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+    color: #333;
+    padding: .5em .5em;
+    text-align: center;
+
+}
+article>h1+ul{
+    line-height: 2em;
+    font-size: 1em;
+    white-space: nowrap;
+    
+/*another way to center    */
+/*
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+*/
+
+}
+h1+ul>li a{
+    color: #fff;
+}
+
+/*including list icons using fontawesome*/
+article>h1+ul>li::before{
+    font-family: 'FontAwesome';
+    content: '\f046';
+    margin: 0 2em 0 -2em;
+    color: #fff;    
+}
+
+
+
+/*................C  O M M O N .......................................................*/
+/*-----------------------Common styles for bottom objects------------------------------------*/
+   
+    main>section{
+        box-sizing: border-box;
+        padding: 0 1.6em 3em 1.6em;
+       
+    }
+    main>section:nth-child(2n){
+        background: rgba(255, 224, 236, .8);
+
+    }
+    main>section:nth-child(2n+1){
+            background: rgba(192, 233, 241, 0.8);
+    }
+    
+    main>section>h1{
+        font-size: 2em;
+        margin: 2em 0;
+        color: #555;
+        text-align: center;
+        text-transform: capitalize;
+        font-family: Georgia,serif;
+    }
+
+
+/*   overwriting padding for the hero area */
+    main>section:first-child{
+        padding: 0;
+        margin: 0;
+    }
+    main>section:nth-child(2){
+        margin-top: 0;
+    }
+
+
+/*_____________________________Styling Services Section_______________________________*/
+/*__________________________________________________________________________________*/
+
+    #services > article{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items:flex-start;
+    }
+
+    #services > article figure{
+        display: flex;
+        flex-flow: column;
+        width: 22.5em;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: .5em;
+    }
+    
+    #services figure figcaption,#services figure p{
+        text-align: center;
+    }
+
+    #services figure>img{
+        width: 50%;
+       
+        margin-bottom: 1.5em;
+        transition: .2s all;
+        box-shadow: 0 0 0 3px #fff, 0 0 0 6px #00eaea, 0 2px 2px 7px #ccc;
+        -webkit-filter: hue-rotate(50deg);
+        -moz-filter: hue-rotate(180deg);
+        -ms-filter: hue-rotate(180deg);
+        filter: hue-rotate(180deg);
+    }
+    #services figure>img:hover{
+        -webkit-filter: hue-rotate(10deg);
+        -moz-filter: hue-rotate(16);
+        -ms-filter: hue-rotate(310deg);
+        filter: hue-rotate(310deg);
+    }
+
+    #services figure figcaption{
+        font-size: 1.3em;
+        margin-bottom: .7em;
+        color: #555;
+    }
+    
+    #services figure p{
+        line-height: 1.6em;
+        color: #555;
+    }
+
+
+/*_____________________________Styling Our Works Section____________________________*/
+/*__________________________________________________________________________________*/
+
+/*Styling our works section*/
+    #works ul{
+        width: 100%;
+        padding:.7em .5em .5em .5em !important;
+        box-sizing: border-box;
+    }
+    #works ul li{
+        display: inline;
+    }
+
+    #works ul li a img{
+        width:  calc((100% - 1.6em*2)/6);
+        display: inline-block;
+        margin: 2px 0 2px 4px;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 0 1px #f39f3f;
+    }
+   
+    #works ul li a img:hover{
+        transform-origin: center center;
+        transition:  .5s all ease-in-out;
+        transform: scale(1.1);
+        box-shadow: 0 0 2px 0 #444;
+    }
+    
+/* initial modal windos style */
+    .modal-window{
+        position: fixed;
+        left:0;
+        top:0;
+        display: none;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        background: rgba(0, 0, 0,.8);
+        z-index: 9999;
+        -webkit-animation: .5s animate ;
+        -moz-animation: .5s animate ;
+            animation: .5s animate ;
+    }
+    .modal-window:target{
+        -webkit-animation: .5s animate ;
+        -moz-animation: .5s animate ;
+            animation: .5s animate ;
+    }
+   
+    @-webkit-keyframes animate{
+        0%{
+            color: #fff;
+            background: rgba(0, 0, 0,.8);
+            transform: translate(-100%);
+            
+        }
+        10%{
+            color: #fff;
+            background: rgba(0, 0, 0,.8);
+            transform: translate(-90%);
+        }
+        20%{
+            transform: translate(-80%);
+        }
+        30%{
+            transform: translate(-70%);
+        }
+        100%{
+            transform: translate(0%);
+        }
+    }
+   @-moz-keyframes animate{
+        0%{
+            color: #fff;
+            background: rgba(0, 0, 0,.8);
+            transform: translate(-100%);
+            
+        }
+        10%{
+            color: #fff;
+            background: rgba(0, 0, 0,.8);
+            transform: translate(-90%);
+        }
+        20%{
+            transform: translate(-80%);
+        }
+        30%{
+            transform: translate(-70%);
+        }
+        100%{
+            transform: translate(0%);
+        }
+    }
+   @keyframes animate{
+        0%{
+            color: #fff;
+            background: rgba(0, 0, 0,.8);
+            transform: translate(-100%);
+            
+        }
+        10%{
+            color: #fff;
+            background: rgba(0, 0, 0,.8);
+            transform: translate(-90%);
+        }
+        20%{
+            transform: translate(-80%);
+        }
+        30%{
+            transform: translate(-70%);
+        }
+        100%{
+            transform: translate(0%);
+        }
+    }
+
+/* Styling the modal-window image */
+    .modal-window img{
+        display: block;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid #fff;
+        z-index: 102;
+    }   
+/* revealing the model window when clicked on images */
+    .modal-window:target{
+        display: table;
+    }
+
+
+/* Positioning the description of modal image */
+
+    .modal-window p{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom:10px;
+        bottom: 0;
+        z-index: 104;
+    }
+
+
+/*    Adding close button to modal window */
+    .modal-window a{
+        position: absolute;
+        right: 10px;
+        top:10px;
+        opacity: .5;
+    }
+    .modal-window a:hover{
+        opacity: 1;
+    }
+    .modal-window a::after{
+        content: ' \f00d';
+        font-family: "FontAwesome";
+        font-size: 1.6em;
+    }
+   
+
+/*_____________________________Styling About Section____________________________*/
+/*__________________________________________________________________________________*/
+
+    #about h2{
+        margin:1em 0;
+    }
+    #about h2, #contact h2{
+        text-align: center;
+        text-transform: capitalize;
+        color: #555;
+    }
+    #about > article{
+        line-height: 1.6em;
+        padding: 0 1.6em;
+        position: relative;
+    }
+
+
+/*_____________ creating read more custom link________*/
+
+/*    
+    hiding the more text paragraph and checkbox
+*/
+    #more-text,#readmorechk{
+        display: none;
+    }
+      
+    /*    hiding read less text label */
+    #read-label span:last-child{
+        visibility: hidden;
+    }
+    
+    /*    styling Read labels */
+    #read-label{
+        text-decoration: underline;
+        cursor: pointer;
+        color: #e5568e;
+    }
+    #read-label:hover{
+        color: #d93072;
+    }
+
+/*............action after checkbox is checked.............*/
+    
+        /*   displaying hidden text*/
+    #readmorechk:checked ~ #more-text{
+        display: block;
+    }
+        /*    showing the read less text label*/
+    #readmorechk:checked ~ #read-label span:last-child{
+        visibility: visible;
+    }
+    
+    /*    positioning the label when checked*/
+    #readmorechk:checked ~ #read-label{
+        position: absolute;
+        top: 100%;
+    }
+    /*    hiding read more text label when checked */
+    #readmorechk:checked ~ #read-label span:first-child{
+        position: absolute;
+        top: -9999px;
+    }
+
+
+/*_____________________________Styling Team Members________________________*/
+/*___________________________________________________________________________*/
+
+    #about aside div {
+        width: 95%;
+        margin: 0 auto;
+        box-sizing: border-box;
+     }
+    
+    #about aside figure{
+        width: calc(33.3% - 5%);
+        box-sizing: border-box;
+        float: left;
+        padding: 1.6em;
+        border-radius: 3px;
+        margin-right: 7.5%;
+        box-shadow: 0 1px 1px 0 #aaa;
+    }
+    #about aside figure:last-child{
+        margin-right: 0;
+    }
+    
+    #about aside figure img, #about figcaption{ 
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid #555;
+        border-radius: 2px;
+    }
+    
+    #about aside figure img{
+        display: block;
+        border-bottom: none;
+    }
+
+    #about figcaption{
+        color: #555;
+        background: #2fbfe1;
+        border-top-color: #f0ecec;
+        text-transform: capitalize;
+        padding: .5em 0;
+        color: #fff;
+    }
+
+    #about figure>p{
+        border: none;
+        height: 0;
+        max-width: auto;
+        overflow: hidden;
+        line-height: 1.6em;
+        transition: .5s all;
+        color: #555;
+        margin-top: .5em;
+    }
+  
+    #about figure:hover img ~ p{
+        transition: .5s all ease-in;
+        height:14em;
+    }
+
+
+
+/*____________________________Contact Styling_______________________*/
+/*___________________________________________________________________________*/
+
+    #contact{
+        width: 100%;
+        padding-bottom: calc(6em + 1.6em);
+    }
+    .contact-details{
+        
+    }
+    .contact-details p, .contact-details a{
+        color: #555 !important;
+        line-height: 1.6em;
+    }
+    #contact .contact-details,#contact .contact-form-container{
+      
+        box-sizing: border-box;
+        float: left;
+    }
+    #contact .contact-details{
+        width: 20%;
+        box-sizing: border-box;
+        padding: 1.6em;
+    }
+
+    #contact .contact-form-container{
+        width: 80%;
+
+    }
+
+    
+    .contact-form{
+        box-sizing: border-box;
+        padding: 1.6em;
+        padding-right: 0;
+    }
+  
+    .contact-form label{
+        display: inline-block;
+        min-width: 200px;
+        width: 30%;
+        color: #555;
+    }
+    .contact-form input:not([class^="btn"]), textarea{
+        padding: 1em;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 200px;
+        margin: .5em 0 .5em 0;
+        border:1px solid #ddd; 
+        border-radius: 4px; 
+        color: #555;
+        position: relative;
+        resize: none;
+    }
+    .contact-form textarea{
+        font-family: helvetica, sans-serif;
+        font-size: 1em !important;
+        height: 100px;
+    }
+
+    .contact-form label[for="description"]{
+        box-sizing: border-box;
+        margin-top: .5em;
+        float: left;
+    }
+
+/*    Focus State of input elements */
+    .contact-form input:not([class^="btn"]):hover, textarea:hover{
+        border: 1px solid #ccc;
+        box-shadow: 0 0 3px 1px #e0e0e0;
+        transition:.3s all ease-in-out;
+    }
+    
+    .contact-form input:not([class^="btn"]):focus, textarea:focus{
+        outline: none;
+        border: 1px solid #bbb;
+        box-shadow: 0 1px 3px 1px #e0e0e0;
+        transition:.3s all ease-in-out;
+    }
+    
+
+
+/* styling submit button */
+
+    
+    .contact-form input[class^="btn"]{
+        padding: .3em 1em;
+        min-width: 100px;
+    }
+
+    .btn-submit{
+        text-align: center;
+        display: inline-block;
+        line-height: 2.6em;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #459b06;
+        font-weight: bold;
+        border:1px solid #fff;
+        transition: all 0.3s ease-in-out;
+    }
+    .btn-submit:hover{
+        color: #fff;
+        background-color: #65be25;
+        font-weight: bold;
+    }
+
+
+/*    Styling the placehoder text  */
+    .contact-form ::-webkit-input-placeholder{
+         color: #b2b1b1;
+    }
+    .contact-form ::-moz-input-placeholder{
+         color: #b2b1b1;
+    }
+    .contact-form ::-ms-input-placeholder{
+         color: #b2b1b1;
+    }
+    .contact-form input-placeholder{
+         color: #b2b1b1;
+    }
+    
+
+
+    .contact-form::after, .contact-form::before{
+        content: "";
+        display: table;
+    }
+    .contact-form::after{
+        clear: both;
+    }
+
+
+
+/*____________________________Footer Area Styling_______________________*/
+/*___________________________________________________________________________*/
+    footer{
+        background-color:  #d93072;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: fixed;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+    }
+    footer p{
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        margin: 1em 0;
+    }
+    footer p a:hover{
+        color: #fff !important;
+    }
+
+    #social{
+        position: fixed;
+        top:calc(50% - 32px*2 - .2em*4);
+        left:0%;
+        z-index: 9999;
+    }
+
+    #social img{
+        padding: .2em;
+        width: 32px;
+        height: 32px;
+        -webkit-filter: hue-rotate(30deg);
+        -moz-filter: hue-rotate(30deg);
+        -ms-filter: hue-rotate(30deg);
+        filter: hue-rotate(30deg);
+    }
+    
+    #social img:hover{
+        -webkit-filter: hue-rotate(165deg);
+        -moz-filter: hue-rotate(165deg);
+        -ms-filter: hue-rotate(165deg);
+        filter: hue-rotate(165deg);
+      
+    }
+
+   
+ footer::after, footer::before, #about aside >div::after,#about aside >div::before,#works::after,main>section::after, #works::before, main>section::before{
+    content: "";
+    display: table;
+}
+
+ footer::after,#about aside >div::after,main>section::after, #works::after{
+    clear: both;
+}
+
